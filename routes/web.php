@@ -17,8 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'WebsitesController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/websites', 'WebsitesController@index')->name('websites');
+
+Route::get('/destroy', 'WebsitesController@destroy')->name('destroy');
 
 Route::get('/destroy', 'WebsitesController@destroy')->name('destroy');
 
 Route::get('/store', 'WebsitesController@store')->name('store');
+
+Route::get('/check', 'CheckController@check')->name('check');
+

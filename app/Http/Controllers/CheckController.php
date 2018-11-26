@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Website;
 
-class HomeController extends Controller
+class CheckController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -15,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -25,7 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $websites = website::all();
-        return view('home', ['websites' => $websites]);
+        return 'aa';
+    }
+
+
+    public function check(Request $request)
+    {
+       $name = $request->input('age');
+       return $name;
     }
 }

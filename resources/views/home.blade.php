@@ -53,7 +53,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($websites as $items)                     
+                                @foreach ($websites as $items)
                                     <tr>
                                         <td>{{ $items->id }}</td>
                                         <td>{{ $items->name }}</td>
