@@ -54,6 +54,7 @@
                             </thead>
                             <tbody>
                                 @foreach ($websites as $items)
+                                    @if ($items->user == Auth::user()->name)
                                     <tr>
                                         <td>{{ $items->id }}</td>
                                         <td>{{ $items->name }}</td>
@@ -62,6 +63,7 @@
                                        
                                         <td><v-btn color="info">Get Code</v-btn></td>
                                     </tr>
+                                    @endif
                                 @endforeach
                                     <tr>
                                         <td></td> 
